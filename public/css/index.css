@@ -1,0 +1,220 @@
+body {
+  letter-spacing: 2px;
+  height: 10000px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4em;
+  font-weight: 400;
+}
+body ul {
+  list-style: none;
+  text-decoration: none;
+}
+body ul li a {
+  text-decoration: none;
+  color: black;
+}
+body header {
+  padding: 30px 20px 0px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body header h1.title {
+  margin: 0;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body header nav ul {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body header nav ul li {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4em;
+  font-weight: 400;
+  margin-right: 30px;
+}
+body header nav ul li:nth-last-child(1) {
+  margin-right: 20px;
+}
+body header nav ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 1.5px;
+  color: black;
+}
+body header nav ul li a.underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+body header nav ul li a.underline-animation:hover:after {
+  font-weight: 600;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+body header nav.desktop {
+  display: none;
+}
+body main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+body main div.main-container {
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main div.main-container section.info-main {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+body main div.main-container section.info-main h3 {
+  text-align: right;
+  font-size: 0.75em;
+  font-weight: 400;
+  width: 30%;
+  max-width: 30%;
+}
+body main div.main-container section.info-main h2 {
+  margin: 0px 5px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 40%;
+  max-width: 40%;
+}
+body main div.main-container section.info-main p {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  width: 30%;
+  max-width: 30%;
+}
+body main div.main-container section.apresentation {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main div.main-container section.apresentation h1 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1em;
+  font-size: 3.5em;
+  max-width: 584px;
+}
+body main div.main-container section.apresentation p {
+  padding: 0px 10px;
+  font-weight: 500;
+  max-width: 400px;
+  text-align: center;
+  line-height: 1.3em;
+  font-size: 0.75em;
+}
+body main div.main-container section.apresentation a {
+  margin-top: 10px;
+  text-transform: capitalize;
+  font-size: 0.83em;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  padding-bottom: 4px;
+  border-bottom: 1px black solid;
+}
+body main div.main-container section.apresentation a:hover {
+  cursor: pointer;
+}
+body main div.main-container section.apresentation img {
+  margin-top: 70px;
+  width: 96%;
+  border-image-slice: fill;
+}
+body main div.second-container {
+  background-color: rgb(248, 243, 243);
+  min-height: 100vh;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main div.second-container h2 {
+  margin-top: 60px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.84em;
+}
+body main div.second-container p {
+  text-align: center;
+  letter-spacing: 1px;
+  max-width: 836px;
+  padding: 0px 5px;
+  font-weight: 500;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  margin-top: 60px;
+}
+body main div.second-container p:nth-of-type(2) {
+  font-weight: 600;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  font-size: 0.9em;
+  line-height: 1em;
+}
+body main div.second-container iframe {
+  margin-top: 60px;
+  width: 350px;
+  height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  body header {
+    padding: 30px 40px 0px 40px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  body header svg.menu-small-devices {
+    display: none;
+  }
+  body header nav.desktop {
+    display: flex;
+  }
+}

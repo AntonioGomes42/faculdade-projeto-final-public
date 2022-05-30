@@ -65,7 +65,7 @@ body {
                     }
 
                     a {
-                        font-size: 1.1em;
+                        font-size: 1.05em;
                         position: relative;
                         display: inline-block;
                         padding: 1.5px;
@@ -100,12 +100,6 @@ body {
                 display: none;
             }
         }
-
-        div.button{
-            svg {
-                &.menu {}
-            }
-        } 
     }
 
     div.overlay{
@@ -240,7 +234,7 @@ body {
                         max-width: 400px;
                         text-align: center;
                         line-height: 1.3em;
-                        font-size: 0.75em;
+                        font-size: 0.9em;
                     }
 
                     a {
@@ -270,7 +264,7 @@ body {
         }
 
         div.second-container {
-            background-color: rgb(248, 243, 243);
+            background-color: rgb(245, 234, 234);
             min-height: 100vh;
             text-align: center;
             width: 100%;
@@ -385,6 +379,9 @@ body {
             nav.desktop {
                 display: flex;
             }
+        }
+        div.overlay, div.mobile-menu{
+            display: none;
         }
     }
 }

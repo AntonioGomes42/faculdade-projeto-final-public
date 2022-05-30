@@ -71,7 +71,7 @@ body {
                         display: inline-block;
                         padding: 1.5px;
                         color: black;
-                        font-size: 1.1em;
+                        font-size: 1.05em;
                         &.underline-animation {
                             &:after {
                                 content: '';
@@ -345,6 +345,9 @@ body {
             nav.desktop {
                 display: flex;
             }
+        }
+        div.overlay, div.mobile-menu{
+            display: none;
         }
     }
 }

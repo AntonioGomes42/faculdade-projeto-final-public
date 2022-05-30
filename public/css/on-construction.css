@@ -63,6 +63,7 @@ body header nav ul li a {
   display: inline-block;
   padding: 1.5px;
   color: black;
+  font-size: 1.1em;
 }
 body header nav ul li a.underline-animation:after {
   content: "";

@@ -1,9 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   letter-spacing: 2px;
   height: auto;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   line-height: 1.4em;
   font-weight: 400;
@@ -59,11 +62,11 @@ body header nav ul li:nth-last-child(1) {
   margin-right: 20px;
 }
 body header nav ul li a {
-  font-size: 1.1em;
   position: relative;
   display: inline-block;
   padding: 1.5px;
   color: black;
+  font-size: 1.1em;
 }
 body header nav ul li a.underline-animation:after {
   content: "";
@@ -145,126 +148,97 @@ body main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 100px;
 }
-body main div.main-container {
-  max-height: 100vh;
-  overflow: hidden;
+body main .page-contain {
   display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-}
-body main div.main-container section.info-main {
-  margin-top: 30px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  max-width: 1660px;
-}
-body main div.main-container section.info-main h3 {
-  text-align: right;
-  font-size: 0.75em;
-  font-weight: 400;
-  width: 30%;
-  max-width: 30%;
-}
-body main div.main-container section.info-main h2 {
-  margin: 0px 5px;
-  text-transform: uppercase;
-  text-align: center;
-  width: 40%;
-  max-width: 40%;
-}
-body main div.main-container section.info-main p {
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  width: 30%;
-  max-width: 30%;
-}
-body main div.main-container section.apresentation {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  padding: 0px 0px 100px 0px;
+  font-family: "Open Sans", sans-serif;
 }
-body main div.main-container section.apresentation h1 {
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1em;
-  font-size: 3.5em;
-  max-width: 584px;
+body main .page-contain > * {
+  font-family: "Poppins", sans-serif;
 }
-body main div.main-container section.apresentation p {
-  padding: 0px 10px;
-  font-weight: 500;
-  max-width: 400px;
-  text-align: center;
-  line-height: 1.3em;
-  font-size: 0.75em;
-}
-body main div.main-container section.apresentation a {
-  margin-top: 10px;
-  text-transform: capitalize;
-  font-size: 0.83em;
+body main .data-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 20.75em;
+  min-height: 20.75em;
+  overflow: hidden;
+  border-radius: 0.5em;
   text-decoration: none;
-  color: black;
-  font-weight: 600;
-  padding-bottom: 4px;
-  border-bottom: 1px black solid;
+  background: white;
+  margin: 1em;
+  padding: 2.75em 2.5em;
+  box-shadow: 0 1.5em 2.5em -0.5em rgba(0, 0, 0, 0.2);
+  transition: transform 0.45s ease, background 0.45s ease;
 }
-body main div.main-container section.apresentation a:hover {
+body main .data-card h3 {
+  color: #2E3C40;
+  font-size: 1.8em;
+  font-weight: 600;
+  line-height: 1;
+  padding-bottom: 0.5em;
+  margin: 0 0 0.142857143em;
+  border-bottom: 2px solid #938b9c;
+  transition: color 0.45s ease, border 0.45s ease;
+}
+body main .data-card h4 {
+  color: #627084;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  margin: 5px 0 1.777777778em;
+  transition: color 0.45s ease;
+}
+body main .data-card p {
+  opacity: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  line-height: 1.8;
+  margin: 0 0 1.25em;
+  transform: translateY(-1em);
+  transition: opacity 0.45s ease, transform 0.5s ease;
+}
+body main .data-card .encharged-text {
+  display: block;
+  color: rgb(63, 24, 80);
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: auto 0 0;
+  transition: color 0.45s ease;
+}
+body main .data-card:hover {
+  background: #000000;
+  transform: scale(1.02);
   cursor: pointer;
 }
-body main div.main-container section.apresentation img {
-  margin-top: 70px;
-  width: 96%;
-  border-image-slice: fill;
-  max-width: 1848px;
+body main .data-card:hover h3 {
+  color: #FFFFFF;
+  border-bottom-color: rgb(222, 191, 235);
 }
-body main div.second-container {
-  background-color: rgb(248, 243, 243);
-  min-height: 100vh;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+body main .data-card:hover h4 {
+  color: #FFFFFF;
 }
-body main div.second-container h2 {
-  margin-top: 60px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 0.84em;
+body main .data-card:hover p {
+  opacity: 1;
+  transform: none;
 }
-body main div.second-container p {
-  text-align: center;
-  letter-spacing: 1px;
-  max-width: 836px;
-  padding: 0px 5px;
-  font-weight: 500;
-  font-size: 1.3em;
-  line-height: 1.5em;
-  margin-top: 60px;
+body main .data-card:hover .encharged-text {
+  display: none;
 }
-body main div.second-container p:nth-of-type(2) {
-  font-weight: 600;
-  margin-top: 70px;
-  margin-bottom: 90px;
-  font-size: 0.9em;
-  line-height: 1em;
-}
-body main div.second-container iframe {
-  margin-top: 60px;
-  width: 350px;
-  height: 200px;
+@keyframes point {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0.125em);
+  }
 }
 body footer {
   margin: 0 auto;

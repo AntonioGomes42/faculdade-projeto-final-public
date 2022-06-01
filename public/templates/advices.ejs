@@ -42,30 +42,16 @@
 
     <main>
         <section class="page-contain">
-            <div class="data-card">
-              <h3>Segunda-Feira</h3>
-              <h4>19:00 - 21:00</h4>
-              <p>Reunião fraternal para falarmos sobre o projeto de caridade.</p>
-              <span class="encharged-text">
-                Veja mais detalhes
-              </span>
-            </div>
-            <div class="data-card">
-                <h3>Terça-Feira</h3>
-                <h4>08:00 - 10:00</h4>
-                <p>Realização de ação solidária através do projeto de caridade.</p>
-                <span class="encharged-text">
-                  Veja mais detalhes
-                </span>
-            </div>
-            <div class="data-card">
-                <h3>Quarta-Feira</h3>
-                <h4>14:00 - 16:00</h4>
-                <p>Reunião fraternal para falarmos sobre o projeto de caridade.</p>
-                <span class="encharged-text">
-                  Veja mais detalhes
-                </span>
-            </div>
+            <% dataToRender.forEach(function(advice){ %>
+                <div class="data-card" advice-id="<%=advice.id%>">
+                    <h3 id="day"><%=advice.day%></h3>
+                    <h4 id="time"><%=advice.time%></h4>
+                    <p id="description"><%=advice.description%></p>
+                    <span class="see-more-text">
+                        Veja mais detalhes
+                    </span>
+                </div>
+            <% }); %>
           </section>
     </main>
     <footer>

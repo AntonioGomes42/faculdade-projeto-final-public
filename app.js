@@ -3,7 +3,7 @@ import path from "path";
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import favicon from "serve-favicon";
-
+import { getAdvices } from "./services/advices.services.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -21,8 +21,9 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
-app.get('/avisos', (req, res) => {
-  res.render('advices');
+app.get("/avisos", async (req, res) => {
+  const advices = await getAdvices();
+  res.render('advices', { dataToRender:advices });
 });
 
 app.get('/eventos', (req, res) => {

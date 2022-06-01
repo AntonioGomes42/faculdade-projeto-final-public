@@ -186,6 +186,7 @@ body {
         .data-card {
         display: flex;
         flex-direction: column;
+        min-width: 291px;
         max-width: 20.75em;
         min-height: 20.75em;
         overflow: hidden;
@@ -228,7 +229,7 @@ body {
             transition: opacity .45s ease, transform .5s ease;
         }
 
-        .encharged-text {
+        .see-more-text {
             display: block;
             color: rgb(63, 24, 80);
             font-size: 1.125em;
@@ -256,7 +257,7 @@ body {
             transform: none;
             }
 
-            .encharged-text {
+            .see-more-text {
                 display: none;
             }
         }

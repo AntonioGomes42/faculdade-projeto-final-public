@@ -164,6 +164,7 @@ body main .page-contain > * {
 body main .data-card {
   display: flex;
   flex-direction: column;
+  min-width: 291px;
   max-width: 20.75em;
   min-height: 20.75em;
   overflow: hidden;
@@ -204,7 +205,7 @@ body main .data-card p {
   transform: translateY(-1em);
   transition: opacity 0.45s ease, transform 0.5s ease;
 }
-body main .data-card .encharged-text {
+body main .data-card .see-more-text {
   display: block;
   color: rgb(63, 24, 80);
   font-size: 1.125em;
@@ -229,7 +230,7 @@ body main .data-card:hover p {
   opacity: 1;
   transform: none;
 }
-body main .data-card:hover .encharged-text {
+body main .data-card:hover .see-more-text {
   display: none;
 }
 @keyframes point {

@@ -34,6 +34,6 @@ app.get('/midias', (req, res) => {
   returnOnConstructionPage(res)
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`App is runing on port ${port}`);
 });
